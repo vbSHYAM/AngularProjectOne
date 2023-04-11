@@ -1,15 +1,21 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
-username:string=""
-password:string=""
+username:string="";
+password:string="";
+showpassword:boolean=false;
 
+
+TogglePassword(){
+  this.showpassword=! this.showpassword
+}
 constructor(private http: HttpClient){}
 
 OnSubmit(){

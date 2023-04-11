@@ -53,3 +53,8 @@ background-color: greenyellow;
 color: black;
 transition: 1s ease-in-out;
 }
+
+.togglePassword{
+  margin-left: -30px;
+  cursor: pointer;
+}
