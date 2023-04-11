@@ -14,7 +14,9 @@ showpassword:boolean=false;
 
 
 TogglePassword(){
-  this.showpassword=! this.showpassword
+  this.showpassword = !this.showpassword;
+  console.log("cool");
+
 }
 constructor(private http: HttpClient){}
 
@@ -24,6 +26,7 @@ OnSubmit(){
   this.http.put('https://dev.ventriksapi1.com/account/signin',body).subscribe({
     next:(response)=>{
       console.log(response);
+
 
     },
     error:(error)=>{
