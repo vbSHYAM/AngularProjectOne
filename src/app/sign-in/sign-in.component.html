@@ -1,0 +1,19 @@
+<section id="Parent">
+  <h1 id="Title">SignIn</h1>
+
+  <form (submit)="OnSubmit()">
+    <!-- ---username----- -->
+    <div id="ChildOne">
+      <label for="Username">UserName:</label>
+      <input class="Field" type="text" name="Username" id="Username" [(ngModel)]="username" required placeholder="enter valid email" />
+    </div>
+
+    <!-- password -->
+    <div id="ChildTwo">
+      <label for="password">Password:</label>
+      <input class="Field" type="password" name="password" id="password" [(ngModel)]="password" required placeholder="enter valid password">
+    </div>
+    <!-- signIn button -->
+    <button type="submit" id="SIGNIN">SignIn</button>
+  </form>
+</section>
