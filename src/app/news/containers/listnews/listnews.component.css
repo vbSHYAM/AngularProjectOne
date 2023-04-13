@@ -1,5 +1,6 @@
 .parent {
   padding: 80px;
+  height: auto;
 }
 .child {
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;

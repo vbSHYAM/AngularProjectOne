@@ -9,9 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListnewsComponent } from './news/containers/listnews/listnews.component';
 
 @NgModule({
-  declarations: [AppComponent, SignInComponent,ListnewsComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
+  declarations: [AppComponent, SignInComponent, ListnewsComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}

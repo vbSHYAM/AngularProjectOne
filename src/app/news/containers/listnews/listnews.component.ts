@@ -27,21 +27,15 @@ export class ListnewsComponent implements OnInit {
 
           this.news = response.data.records.map((record: any) => {
             return {
-
               headline: record.headline,
               body: record.body,
-              releaseTime:record.releaseTime.slice(0,10),
+              releaseTime: record.releaseTime.slice(0, 10),
             };
-
-          }
-          );
+          });
         });
     } else {
       console.log('no token present ');
     }
   }
-}
 
-// headline
-// copyright
-// body
+}
