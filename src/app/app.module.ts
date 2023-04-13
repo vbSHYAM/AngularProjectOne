@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ListnewsComponent } from './news/containers/listnews/listnews.component';
 
 @NgModule({
-  declarations: [AppComponent, SignInComponent],
+  declarations: [AppComponent, SignInComponent,ListnewsComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
   providers: [],
   bootstrap: [AppComponent],

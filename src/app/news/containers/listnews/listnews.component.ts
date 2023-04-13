@@ -22,8 +22,19 @@ export class ListnewsComponent implements OnInit {
 
       this.http
         .put(`https://dev.ventriksapi1.com/${API_GET_NEWS}`, {}, Headers)
-        .subscribe((data) => {
-          console.log(data);
+        .subscribe((response: any) => {
+          console.log(response.data.records);
+
+          this.news = response.data.records.map((record: any) => {
+            return {
+
+              headline: record.headline,
+              body: record.body,
+
+            };
+
+          }
+          );
         });
     } else {
       console.log('no token present ');
