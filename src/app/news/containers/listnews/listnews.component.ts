@@ -30,7 +30,7 @@ export class ListnewsComponent implements OnInit {
 
               headline: record.headline,
               body: record.body,
-
+              releaseTime:record.releaseTime.slice(0,10),
             };
 
           }

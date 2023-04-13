@@ -1,9 +1,15 @@
-
-
-.body-content{
-height: 95px;
+.parent {
+  padding: 80px;
 }
-
+.child {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  border-radius: 15px;
+}
+.child:hover {
+  transform: scale(1.04);
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
 
 .body-content {
   display: -webkit-box;
@@ -11,4 +17,28 @@ height: 95px;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 95px;
+}
+
+.headline {
+  height: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.headline:hover {
+  text-decoration: underline;
+}
+
+.Date {
+  margin-left: 185px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+.child:hover .Date {
+  color: red;
+}
+
+.copyright{
+  margin-left: 185px;
+  font-size: 0.8rem;
 }

@@ -1,84 +1,14 @@
-<!-- <section
-  *ngFor="let item of news"
-  class="max-w-sm rounded overflow-hidden shadow-lg"
->
-  <div class="font-bold text-xl mb-2">
-    {{ item.headline }}
-  </div>
-</section> -->
-
-<!-- <section
-  *ngFor="let item of news"
-  class="max-w-sm rounded overflow-hidden shadow-lg"
->
-  <div class="font-bold text-xl mb-2">{{ item.headline }}</div>
-  <p class="text-gray-700 text-base">{{ item.body }}</p>
-</section> -->
-
-<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <div
-    *ngFor="let item of news"
-    class="bg-white rounded-lg shadow-lg overflow-hidden"
-  >
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 parent">
+  <div *ngFor="let item of news" class="overflow-hidden child">
     <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2 line-clamp-3">{{ item.headline }}</div>
-      <p class="text-gray-700 text-base">{{ item.body }}</p>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <div
-    *ngFor="let item of news"
-    class="bg-white rounded-lg shadow-lg overflow-hidden"
-  >
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2 ">{{ item.headline }}</div>
-      <p class="text-gray-700 text-base lg:truncate">{{ item.body }}</p>
-
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <div
-    *ngFor="let item of news"
-    class="bg-white rounded-lg shadow-lg overflow-hidden"
-  >
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2 ">{{ item.headline }}</div>
-      <p class="text-gray-700 h-20  line-clamp-1">
+      <p class="Date">{{ item.releaseTime }}</p>
+      <div class="font-bold text-lg mb-2 cursor-pointer headline">
+        {{ item.headline }}
+      </div>
+      <p class="text-gray-700 overflow-hidden body-content cursor-pointer">
         {{ item.body }}
       </p>
     </div>
-  </div>
-</div> -->
-
-<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <div
-    *ngFor="let item of news"
-    class="bg-white rounded-lg shadow-lg overflow-hidden"
-  >
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2 ">{{ item.headline }}</div>
-      <p class="text-gray-700  overflow-hidden body-content truncate  ">
-        {{ item.body }}
-      </p>
-    </div>
-  </div>
-</div> -->
-<!-- ------------------- -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <div
-    *ngFor="let item of news"
-    class="bg-white rounded-lg shadow-lg overflow-hidden"
-  >
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2 ">{{ item.headline }}</div>
-      <p class="text-gray-700  overflow-hidden body-content">
-        {{ item.body }}
-      </p>
-    </div>
+    <p class="copyright">©-Copyright 2023</p>
   </div>
 </div>
-
