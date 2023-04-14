@@ -30,16 +30,18 @@
   text-decoration: underline;
 }
 
-.Date {
-  margin-left: 185px;
+.Time {
+  margin-left: 170px;
   margin-top: -5px;
   margin-bottom: 10px;
+  display: inline-block;
 }
-.child:hover .Date {
+
+.child:hover .Time {
   color: red;
 }
 
-.copyright{
+.copyright {
   margin-left: 185px;
   font-size: 0.8rem;
 }

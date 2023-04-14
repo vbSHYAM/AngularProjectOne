@@ -26,10 +26,21 @@ export class ListnewsComponent implements OnInit {
           console.log(response.data.records);
 
           this.news = response.data.records.map((record: any) => {
+            const releaseTime = new Date(record.releaseTime); // create a Date object from the releaseTime string
+            const hours = releaseTime.getHours().toString().padStart(2, '0'); // get the hours component
+            const minutes = releaseTime
+              .getMinutes()
+              .toString()
+              .padStart(2, '0'); // get the minutes component
+            const day = releaseTime.getDate();
+            const month = releaseTime.getMonth() + 1;
+            const year = releaseTime.getFullYear().toString().substr(-2); // get the last two digits of the year
+
             return {
               headline: record.headline,
               body: record.body,
-              releaseTime: record.releaseTime.slice(0, 10),
+              releaseTime: `${hours}:${minutes}`,
+              releaseDate: `${day}/${month}/${year}`,
             };
           });
         });
@@ -37,5 +48,4 @@ export class ListnewsComponent implements OnInit {
       console.log('no token present ');
     }
   }
-
 }

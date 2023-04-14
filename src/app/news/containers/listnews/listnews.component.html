@@ -1,7 +1,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 parent">
   <div *ngFor="let item of news" class="overflow-hidden child">
     <div class="px-6 py-4">
-      <p class="Date">{{ item.releaseTime }}</p>
+      <p class="Time">{{ item.releaseDate }} - {{ item.releaseTime }} </p>
       <div class="font-bold text-lg mb-2 cursor-pointer headline">
         {{ item.headline }}
       </div>
