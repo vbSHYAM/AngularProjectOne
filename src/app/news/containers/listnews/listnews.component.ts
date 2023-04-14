@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { API_GET_NEWS } from '../../../news/constants/news.c';
+import { MatSidenav } from '@angular/material/sidenav';
 @Component({
   selector: 'app-listnews',
   templateUrl: './listnews.component.html',
@@ -8,7 +9,8 @@ import { API_GET_NEWS } from '../../../news/constants/news.c';
 })
 export class ListnewsComponent implements OnInit {
   news: any;
-
+  selectedNewsItem: any;
+  @ViewChild('detailsSidenav') detailsSidenav!: MatSidenav;
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -50,11 +52,20 @@ export class ListnewsComponent implements OnInit {
               body: record.body,
               releaseTime: `${hours}:${minutes}`,
               releaseDate: `${day}/${month}/${year}`,
+              copyright: record.copyright,
             };
           });
         });
     } else {
       console.log('no token present ');
     }
+  }
+  showDetails(item: any) {
+    this.selectedNewsItem = item;
+    this.detailsSidenav.open();
+  }
+
+  hideDetails() {
+    this.detailsSidenav.close();
   }
 }
