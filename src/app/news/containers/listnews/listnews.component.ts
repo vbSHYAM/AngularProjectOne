@@ -27,14 +27,23 @@ export class ListnewsComponent implements OnInit {
 
           this.news = response.data.records.map((record: any) => {
             const releaseTime = new Date(record.releaseTime); // create a Date object from the releaseTime string
+            console.log(releaseTime);
+
             const hours = releaseTime.getHours().toString().padStart(2, '0'); // get the hours component
+            console.log(hours);
+
             const minutes = releaseTime
               .getMinutes()
               .toString()
               .padStart(2, '0'); // get the minutes component
+            console.log(minutes);
+
             const day = releaseTime.getDate();
             const month = releaseTime.getMonth() + 1;
-            const year = releaseTime.getFullYear().toString().substr(-2); // get the last two digits of the year
+            console.log(month);
+
+            const year = releaseTime.getFullYear().toString(); // get the last two digits of the year
+            console.log(year);
 
             return {
               headline: record.headline,
