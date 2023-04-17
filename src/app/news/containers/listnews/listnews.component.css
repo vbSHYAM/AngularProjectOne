@@ -238,18 +238,19 @@
   }
 } */
 
-/* ------------------------------- */
+/* ------------!Altered !--------------------- */
 .parent {
   padding: 5rem;
   height: auto;
 }
 .child {
-  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 0.188rem;
   border-radius: 1rem;
 }
 .child:hover {
   transform: scale(1.04);
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  color: rgb(47, 61, 126);
 }
 
 .body-content {
@@ -258,7 +259,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 6.85rem;
+  /* height: 6.85rem; */
 }
 
 .headline {
@@ -276,7 +277,7 @@
 
 #copyright {
   height: 5.938rem;
-  width: 270px;
+  /* width: 16.88rem; */
   font-size: 0.6rem;
   margin-left: 1.65rem;
   text-align: left;
@@ -286,7 +287,7 @@
 
 .mat-drawer {
   width: 25rem !important;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
   background-color: #f9f4f4;
   position: absolute;
   top: 0;
@@ -300,10 +301,6 @@
 }
 
 .details-container h3 {
-  /* position: absolute;
-  position: fixed !important;
-  top: 1.25rem;
-  left: 1.25rem; */
   color: crimson;
   font-weight: bold;
 }
@@ -321,7 +318,7 @@
   margin-bottom: 0.313rem;
   text-align: left;
   margin-top: 1.875rem;
-  font-size: 1.3rem ;
+  font-size: 1.15rem ;
 
 }
 

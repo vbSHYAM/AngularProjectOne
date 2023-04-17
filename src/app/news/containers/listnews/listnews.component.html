@@ -59,7 +59,7 @@
     </div>
     <div class="close-btn-container">
       <button
-        class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded"
+        class="bg-gray-200 border-none hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded"
         (click)="hideDetails()"
       >
         close
@@ -75,7 +75,7 @@
       class="overflow-hidden child"
     >
       <div class="px-6 py-4">
-        <p class="Time text-sm lg:text-base xl:text-lg ml-36 mb-2.5">
+        <p class="Time text-sm lg:text-base xl:text-lg sm:ml-0 md:ml-34 mb-2.5">
           {{ item.releaseDate }} - {{ item.releaseTime }}
         </p>
         <div
@@ -84,14 +84,16 @@
           {{ item.headline }}
         </div>
         <p
-          class="text-gray-700 overflow-hidden body-content cursor-pointer text-base lg:text-lg xl:text-xl"
+          class="text-gray-700 overflow-hidden body-content cursor-pointer text-base lg:text-lg xl:text-xl h-100 sm:h-90"
         >
           {{ item.body }}
         </p>
       </div>
-      <p class="text-sm lg:text-base xl:text-lg" id="copyright">
+      <p class="text-sm lg:text-base lg:h-24 lg:w-64 xl:text-lg" id="copyright">
         {{ item.copyright }}
       </p>
     </div>
   </div>
 </mat-sidenav-container>
+
+
