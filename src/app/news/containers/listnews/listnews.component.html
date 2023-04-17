@@ -1,5 +1,5 @@
 <!-- ---------------------side nav----------------------- -->
-<mat-sidenav-container>
+<!-- <mat-sidenav-container>
   <mat-sidenav #detailsSidenav mode="over" opened="false" position="end">
     <div class="details-container">
       <h3>
@@ -14,10 +14,10 @@
     <div class="close-btn-container">
       <button mat-icon-button (click)="hideDetails()">close</button>
     </div>
-  </mat-sidenav>
+  </mat-sidenav> -->
 
-  <!-- ----------card--------------------------- -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 parent">
+<!-- ----------card--------------------------- -->
+<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 parent">
     <div
       *ngFor="let item of news"
       (click)="showDetails(item)"
@@ -33,6 +33,65 @@
         </p>
       </div>
       <p id="copyright">{{ item.copyright }}</p>
+    </div>
+  </div>
+</mat-sidenav-container> -->
+
+<!-- ----------------------Responsive------------------------------------------------- -->
+
+<mat-sidenav-container>
+  <mat-sidenav #detailsSidenav mode="over" opened="false" position="end">
+    <div class="details-container">
+      <h3 class=" lg:text-2xl xl:text-3xl ml-1 mb-1">
+        {{ selectedNewsItem?.releaseDate }} -
+        {{ selectedNewsItem?.releaseTime }}
+      </h3>
+      <h2 class="text-xl lg:text-3xl xl:text-4xl font-bold">
+        {{ selectedNewsItem?.headline }}
+      </h2>
+      <p class="text-base lg:text-lg xl:text-xl">
+        {{ selectedNewsItem?.body }}
+      </p>
+
+      <p class="COPYRIGHT text-sm lg:text-base xl:text-lg">
+        {{ selectedNewsItem?.copyright }}
+      </p>
+    </div>
+    <div class="close-btn-container">
+      <button
+        class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded"
+        (click)="hideDetails()"
+      >
+        close
+      </button>
+    </div>
+  </mat-sidenav>
+
+  <!-- ----------card--------------------------- -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 parent">
+    <div
+      *ngFor="let item of news"
+      (click)="showDetails(item)"
+      class="overflow-hidden child"
+    >
+      <div class="px-6 py-4">
+        <p class="Time text-sm lg:text-base xl:text-lg ml-36 mb-2.5">
+          {{ item.releaseDate }} - {{ item.releaseTime }}
+        </p>
+        <div
+          class="font-bold text-lg lg:text-xl xl:text-2xl mb-2 cursor-pointer headline"
+        >
+          {{ item.headline }}
+        </div>
+        <p
+          class="text-gray-700 overflow-hidden body-content cursor-pointer text-base lg:text-lg xl:text-xl"
+        >
+          {{ item.body }}
+        </p>
+      </div>
+      <p class="text-sm lg:text-base xl:text-lg" id="copyright">
+        {{ item.copyright }}
+      </p>
     </div>
   </div>
 </mat-sidenav-container>

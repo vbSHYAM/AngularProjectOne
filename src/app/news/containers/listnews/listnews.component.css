@@ -1,4 +1,4 @@
-.parent {
+/* .parent {
   padding: 80px;
   height: auto;
 }
@@ -7,7 +7,7 @@
   border-radius: 15px;
 }
 .child:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
   transition: all 1s ease-in-out;
 }
 
@@ -46,11 +46,11 @@
   font-size: 0.6rem;
   margin-left: 17px;
   text-align: center;
-}
+} */
 
 /* ----------side nav ---------------- */
 
-.mat-drawer {
+/* .mat-drawer {
   width: 400px !important;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: #f9f4f4;
@@ -120,12 +120,12 @@
   color: #fff;
   background-color: #333;
   transition: 1s ease-in-out;
-}
+} */
 
 /* ----------Media quries-------------- */
 
 /* Mobile Devices */
-@media only screen and (max-width: 599px) {
+/* @media only screen and (max-width: 599px) {
   .parent {
     padding: 20px;
   }
@@ -159,10 +159,10 @@
     position: relative;
     box-shadow: none;
   }
-}
+} */
 
 /* Tablets */
-@media only screen and (min-width: 600px) and (max-width: 959px) {
+/* @media only screen and (min-width: 600px) and (max-width: 959px) {
   .parent {
     padding: 40px;
   }
@@ -190,10 +190,10 @@
     position: relative;
     box-shadow: none;
   }
-}
+} */
 
 /* Desktops  */
-@media only screen and (min-width: 960px) {
+/* @media only screen and (min-width: 960px) {
   .parent {
     padding: 80px;
     display: flex;
@@ -236,4 +236,121 @@
     right: 0;
     height: auto;
   }
+} */
+
+/* ------------------------------- */
+.parent {
+  padding: 5rem;
+  height: auto;
+}
+.child {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  border-radius: 1rem;
+}
+.child:hover {
+  transform: scale(1.04);
+  transition: all 1s ease-in-out;
+}
+
+.body-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 6.85rem;
+}
+
+.headline {
+  height: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.headline:hover {
+  text-decoration: underline;
+}
+
+.child:hover .Time {
+  color: red;
+}
+
+#copyright {
+  height: 5.938rem;
+  width: 270px;
+  font-size: 0.6rem;
+  margin-left: 1.65rem;
+  text-align: left;
+}
+
+/* ----------side nav ---------------- */
+
+.mat-drawer {
+  width: 25rem !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #f9f4f4;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: auto;
+}
+
+.details-container {
+  padding: 1.25rem;
+  cursor: pointer;
+}
+
+.details-container h3 {
+  /* position: absolute;
+  position: fixed !important;
+  top: 1.25rem;
+  left: 1.25rem; */
+  color: crimson;
+  font-weight: bold;
+}
+
+.details-container h2 {
+  color: rgb(47, 61, 126);
+  margin-bottom: 0.625rem;
+  margin-top: 1rem;
+}
+.details-container h2:hover {
+  text-decoration: underline;
+}
+
+.details-container p {
+  margin-bottom: 0.313rem;
+  text-align: left;
+  margin-top: 1.875rem;
+  font-size: 1.3rem ;
+
+}
+
+.COPYRIGHT {
+  text-align: left ;
+  font-size: 0.7rem !important;
+  color: rgb(165, 160, 160);
+}
+
+.close-btn-container {
+  text-align: center;
+}
+.close-btn-container button {
+  width: 7.5rem;
+  margin-left: 1.25rem;
+}
+
+.close-btn-container button {
+  color: #333;
+  background-color: #fff;
+  border-radius: 0.313rem;
+  padding: 0.313rem 0.625rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn-container button:hover {
+  color: #fff;
+  background-color: #333;
+  transition: 0.7s ease-in-out;
 }

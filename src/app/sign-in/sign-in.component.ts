@@ -11,6 +11,7 @@ export class SignInComponent {
   password: string = '';
   showpassword: boolean = false;
 
+
   TogglePassword() {
     this.showpassword = !this.showpassword;
     console.log('cool');
