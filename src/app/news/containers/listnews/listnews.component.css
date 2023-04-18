@@ -238,7 +238,7 @@
   }
 } */
 
-/* ------------!Altered !--------------------- */
+/*! ------------!Altered !--------------------- */
 .parent {
   padding: 5rem;
   height: auto;
@@ -276,8 +276,7 @@
 }
 
 #copyright {
-  height: 5.938rem;
-  /* width: 16.88rem; */
+  height: 4rem;
   font-size: 0.6rem;
   margin-left: 1.65rem;
   text-align: left;
