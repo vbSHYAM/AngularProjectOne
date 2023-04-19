@@ -42,7 +42,7 @@
 <mat-sidenav-container>
   <mat-sidenav #detailsSidenav mode="over" opened="false" position="end">
     <div class="details-container">
-      <h3 class=" lg:text-2xl xl:text-3xl ml-1 mb-1">
+      <h3 class="lg:text-2xl xl:text-3xl ml-1 mb-1">
         {{ selectedNewsItem?.releaseDate }} -
         {{ selectedNewsItem?.releaseTime }}
       </h3>
@@ -74,6 +74,12 @@
       (click)="showDetails(item)"
       class="overflow-hidden child"
     >
+      <p
+        class="StoryType inline-block mt-0 h-7 text-white w-32 font-sans bg-black  xl:ml-56 lg:ml-56 md:ml-44 sm:ml-28 rounded-br-none rounded-tr-none"
+      >
+        {{ item.storyType }}
+      </p>
+
       <div class="px-6 py-4">
         <p class="Time text-sm lg:text-base xl:text-lg sm:ml-0 md:ml-34 mb-2.5">
           {{ item.releaseDate }} - {{ item.releaseTime }}
@@ -89,11 +95,12 @@
           {{ item.body }}
         </p>
       </div>
-      <p class="  truncate text-sm lg:text-base lg:h-24 lg:w-64 xl:text-lg" id="copyright">
+      <p
+        class="truncate text-sm lg:text-base lg:h-24 lg:w-64 xl:text-lg"
+        id="copyright"
+      >
         {{ item.copyright }}
       </p>
     </div>
   </div>
 </mat-sidenav-container>
-
-

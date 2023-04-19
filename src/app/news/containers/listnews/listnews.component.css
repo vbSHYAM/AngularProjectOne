@@ -282,6 +282,17 @@
   text-align: left;
 }
 
+.StoryType {
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.child:hover .StoryType {
+  color: black;
+  background-color: #f9f4f4;
+  transition: 1s ease-in-out;
+}
+
 /* ----------side nav ---------------- */
 
 .mat-drawer {
@@ -317,12 +328,11 @@
   margin-bottom: 0.313rem;
   text-align: left;
   margin-top: 1.875rem;
-  font-size: 1.15rem ;
-
+  font-size: 1.15rem;
 }
 
 .COPYRIGHT {
-  text-align: left ;
+  text-align: left;
   font-size: 0.7rem !important;
   color: rgb(165, 160, 160);
 }

@@ -12,7 +12,11 @@ export class ListnewsComponent implements OnInit {
   selectedNewsItem: any;
   @ViewChild('detailsSidenav') detailsSidenav!: MatSidenav;
   constructor(private http: HttpClient) {}
-
+  /**
+   *
+   *
+   * @memberof ListnewsComponent
+   */
   ngOnInit(): void {
     const Token = window.localStorage.getItem('idToken');
     if (Token) {
@@ -53,6 +57,7 @@ export class ListnewsComponent implements OnInit {
               releaseTime: `${hours}:${minutes}`,
               releaseDate: `${day}/${month}/${year}`,
               copyright: record.copyright,
+              storyType:record.storyType,
             };
           });
         });
