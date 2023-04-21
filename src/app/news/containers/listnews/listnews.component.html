@@ -1,44 +1,3 @@
-<!-- ---------------------side nav----------------------- -->
-<!-- <mat-sidenav-container>
-  <mat-sidenav #detailsSidenav mode="over" opened="false" position="end">
-    <div class="details-container">
-      <h3>
-        {{ selectedNewsItem?.releaseDate }} -
-        {{ selectedNewsItem?.releaseTime }}
-      </h3>
-      <h2>{{ selectedNewsItem?.headline }}</h2>
-      <p>{{ selectedNewsItem?.body }}</p>
-
-      <p class="COPYRIGHT">{{ selectedNewsItem?.copyright }}</p>
-    </div>
-    <div class="close-btn-container">
-      <button mat-icon-button (click)="hideDetails()">close</button>
-    </div>
-  </mat-sidenav> -->
-
-<!-- ----------card--------------------------- -->
-<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 parent">
-    <div
-      *ngFor="let item of news"
-      (click)="showDetails(item)"
-      class="overflow-hidden child"
-    >
-      <div class="px-6 py-4">
-        <p class="Time">{{ item.releaseDate }} - {{ item.releaseTime }}</p>
-        <div class="font-bold text-lg mb-2 cursor-pointer headline">
-          {{ item.headline }}
-        </div>
-        <p class="text-gray-700 overflow-hidden body-content cursor-pointer">
-          {{ item.body }}
-        </p>
-      </div>
-      <p id="copyright">{{ item.copyright }}</p>
-    </div>
-  </div>
-</mat-sidenav-container> -->
-
-<!-- ----------------------Responsive------------------------------------------------- -->
-
 <mat-sidenav-container>
   <mat-sidenav #detailsSidenav mode="over" opened="false" position="end">
     <div class="details-container">
@@ -74,13 +33,16 @@
       (click)="showDetails(item)"
       class="overflow-hidden child"
     >
-      <p
+      <!-- <p
         class="StoryType inline-block mt-0 h-7 text-white w-32 font-sans bg-black  xl:ml-56 lg:ml-56 md:ml-44 sm:ml-28 rounded-br-none rounded-tr-none"
       >
         {{ item.storyType }}
-      </p>
+      </p> -->
 
-      <div class="px-6 py-4">
+      <p class="StoryType inline-block">
+        {{ item.storyType }}
+      </p>
+      <div class="px-6 py-4 mt-6">
         <p class="Time text-sm lg:text-base xl:text-lg sm:ml-0 md:ml-34 mb-2.5">
           {{ item.releaseDate }} - {{ item.releaseTime }}
         </p>
