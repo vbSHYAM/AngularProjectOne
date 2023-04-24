@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 // import { ListnewsComponent } from './containers/listnews/listnews.component';
 import { ViewnewsComponent } from './containers/viewnews/viewnews.component';
 
-
 @NgModule({
   declarations: [
     // ListnewsComponent,
     ViewnewsComponent,
     // ConstantsComponent,
+
   ],
   imports: [
     CommonModule

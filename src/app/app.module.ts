@@ -9,9 +9,10 @@ import { ListnewsComponent } from './news/containers/listnews/listnews.component
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { ReplaceSpecialCharacterPipe } from './replace-special-character.pipe';
 
 @NgModule({
-  declarations: [AppComponent, SignInComponent, ListnewsComponent],
+  declarations: [AppComponent, SignInComponent, ListnewsComponent, ReplaceSpecialCharacterPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
