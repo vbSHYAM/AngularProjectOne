@@ -29,6 +29,27 @@ describe('ReplaceSpecialCharacterPipe', () => {
       inputString,
       specialCharacter
     );
-    expect(output).toEqual('Test string with special character %')
+    expect(output).toEqual('Test string with special character %');
+  });
+
+  it('It should return the original string when second argument is not passed', () => {
+    const inputString = 'Test string with special character %';
+    const specialCharacter = '';
+    const output = replaceSpecialCharacterPipe.transform(
+      inputString,
+      specialCharacter
+    );
+    expect(output).toEqual(inputString);
+  });
+  it('It should handle multiple special characters in the input string', () => {
+    const inputString = 'Test string with multiple special character @ and #';
+    const specialCharacter = '$';
+    const output = replaceSpecialCharacterPipe.transform(
+      inputString,
+      specialCharacter
+    );
+    expect(output).toEqual(
+      'Test string with multiple special character $ and $'
+    );
   });
 });
