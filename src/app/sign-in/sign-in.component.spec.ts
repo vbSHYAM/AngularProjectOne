@@ -89,8 +89,8 @@ describe('SignInComponent', () => {
   //     By.css('#SIGNIN')
   //   ).nativeElement;
   //   // set the values
-  //   usernameInput.nativeElement.value = 'sharat.s@ventriks.com';
-  //   passwordInput.nativeElement.value = 'Groot500!';
+  //   usernameInput.nativeElement.value = '';
+  //   passwordInput.nativeElement.value = '!';
   //   // dispatch event
   //   usernameInput.nativeElement.dispatchEvent(new Event('input'));
   //   passwordInput.nativeElement.dispatchEvent(new Event('input'));
