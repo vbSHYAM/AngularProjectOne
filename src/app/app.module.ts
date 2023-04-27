@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListnewsComponent } from './news/containers/listnews/listnews.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -17,6 +17,7 @@ import { ReplaceSpecialCharacterPipe } from './replace-special-character.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MatSidenavModule,
     BrowserAnimationsModule,

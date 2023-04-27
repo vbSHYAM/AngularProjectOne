@@ -1,8 +1,66 @@
 <section id="Parent">
   <h1 id="Title">SignIn</h1>
 
-  <form (submit)="OnSubmit()">
+  <form (submit)="OnSubmit()" [formGroup]="signInForm" novalidate>
     <!-- ---username----- -->
+    <div id="ChildOne">
+      <label for="Username">UserName:</label>
+      <input
+        class="Field"
+        type="text"
+        name="Username"
+        id="Username"
+        formControlName="username"
+        required
+        placeholder="enter valid email"
+      />
+      <!-- --- -->
+      <!-- (?) - save navigation operator -->
+      <!-- <div
+        *ngIf="
+          signInForm.get('username')?.invalid &&
+          (signInForm.get('username')?.dirty ||
+            signInForm.get('username')?.touched)
+        "
+        class="alert alert-danger"
+      >
+        <div *ngIf="signInForm.get('username')?.errors?.['required']">
+          Username is required.
+        </div>
+        <div *ngIf="signInForm.get('username')?.errors?.['email']">
+          Invalid email address.
+        </div>
+      </div> -->
+    </div>
+    <!-- password -->
+    <div id="ChildTwo">
+      <label for="password">Password:</label>
+      <input
+        class="Field"
+        type="{{ showpassword ? 'text' : 'password' }}"
+        name="password"
+        id="password"
+        formControlName="password"
+        required
+        placeholder="enter valid password"
+      />
+
+      <span class="togglePassword" (click)="TogglePassword()">
+        {{ showpassword ? "👁️" : "😉" }}
+      </span>
+    </div>
+    <!-- signIn button -->
+    <button type="submit" id="SIGNIN">SignIn</button>
+  </form>
+</section>
+
+<!-- --------------------------no formic---------- -->
+
+<!-- <section id="Parent">
+  <h1 id="Title">SignIn</h1>
+
+  <form (submit)="OnSubmit()">
+    //!username
     <div id="ChildOne">
       <label for="Username">UserName:</label>
       <input
@@ -16,7 +74,7 @@
       />
     </div>
 
-    <!-- password -->
+    //! password
     <div id="ChildTwo">
       <label for="password">Password:</label>
       <input
@@ -32,7 +90,7 @@
         {{ showpassword ? "👁️" : "😉" }}
       </span>
     </div>
-    <!-- signIn button -->
+    //!signIn button
     <button type="submit" id="SIGNIN">SignIn</button>
   </form>
-</section>
+</section> -->
